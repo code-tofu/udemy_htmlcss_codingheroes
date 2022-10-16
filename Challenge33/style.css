@@ -1,0 +1,76 @@
+/*
+Ref: 
+https://www.w3schools.com/csS/css_text_decoration.asp
+https://www.w3schools.com/CSS/css_list.asp
+
+
+*/
+
+body{
+	font-family: sans-serif;
+}
+
+/* practice normal tag selection*/
+h1{
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #f7f7f7;
+	/* background vs background-color?*/
+}
+
+/*class for h1*/
+.product-title {
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+  background-color: #f7f7f7;
+}
+
+/* practice ID selector*/
+#product-picture{
+	border: 4px dashed;
+	/* need to specify the border type solid?*/
+}
+
+.price{
+	font-size: 24px;
+}
+
+.price-shipping{
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #778899;
+	font-weight: bold;
+	/*decoration color and color are different things*/
+}
+
+/*should practice adding visited and active (always specify!!!)*/
+.more-info:link{
+	color:#000000
+}
+.more-info:hover{
+	text-decoration: none;
+}
+
+.details-title {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.list-details{
+  list-style-type: square;
+}
+
+.add-cart {
+  background-color: #000;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.add-cart:hover {
+  color: #000;
+  background-color: #fff;
+}

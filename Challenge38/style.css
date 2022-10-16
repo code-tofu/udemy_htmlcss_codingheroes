@@ -1,0 +1,107 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+	font-family: sans-serif;
+	line-height: 1.4;
+}
+
+.article-div{
+	width:  825px;
+	margin: auto;
+	border:  4px solid black;
+}
+
+/* practice normal tag selection*/
+h1{
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #f7f7f7;
+	padding:  10px;
+	/* background vs background-color?*/
+}
+
+/*class for h1*/
+.product-title {
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+  background-color: #f7f7f7;
+  padding:  10px;
+
+}
+
+/* practice ID selector*/
+#product-picture{
+	border: 4px dashed;
+	/* need to specify the border type solid?*/
+}
+	
+.price{
+	font-size: 24px;
+	font-weight: bold;
+  padding: 0px 5px;
+}
+
+.price-shipping{
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #778899;
+	font-weight: bold;
+	margin-bottom: 20px;
+  padding: 0px 5px;
+}
+	/*decoration color and color are different things*/
+
+.article-text{
+  padding: 0px 5px;
+}
+
+/*should practice adding visited and active (always specify!!!)*/
+.more-info:link{
+	color:#000000;
+  padding: 0px 5px 20px 5px;
+  /*margins seem to overlap*/
+}
+
+.more-info:hover{
+	text-decoration: none;
+	padding: 0px 5px 20px 5px;
+}
+
+.details-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 0px 5px;
+  margin-top: 30px;
+}
+
+.list-details{
+  list-style-type: square;
+  padding-bottom: 10px;
+  margin-left:20px;
+}
+
+.list-details-lastli{
+	padding-bottom: 20px;
+
+
+}
+
+.add-cart {
+  background-color: #000;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+	width: 100%;
+	padding: 15px;
+}
+
+.add-cart:hover {
+  color: #000;
+  background-color: #fff;
+}
