@@ -1,0 +1,801 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+  /* use background color when using padding */
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 3.2rem;
+  /* width shall 1300px or 130rem of 10px */
+  align-items: center;
+  gap: 9.6rem;
+}
+
+.hero-img {
+  width: 100%;
+  /* changes the width to 100% of the fr*/
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  display: inline-block;
+  border-radius: 9px;
+  text-decoration: none;
+
+  /* to make the background change smooth */
+  transition: all 1s;
+
+  border:none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+  color: #555;
+  /* adding a border on the inside */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.margin-right-sm {
+  /* special (helper) class to  apply certain properties, overriding all list-style-position */
+  margin-right: 1.6em !important;
+}
+
+.delivered-meals {
+  display: flex;
+  margin-top: 8rem;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.delivered-imgs {
+  display: flex;
+}
+
+/* use descendent selector */
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+
+.delivered-imgs img:last-child {
+  /* to get rid of last child right margin */
+  margin-right: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  font-weight: 700;
+  color: #e67e22;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  /* height shall be fixed as it's sticky */
+}
+
+.main-nav-list {
+  display: flex;
+  list-style: none;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 1s;
+  /* transition should be on the original state */
+  display: inline-block;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  /* adding the and selector increases the specificity  */
+  border-radius: 9px;
+  padding: 1.2rem 2.4rem;
+  display: inline-block;
+  color: #fff;
+  background-color: #e67e22;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+/* creating a template grid
+dividing functionality into different classes
+.section-how {
+  padding: 9.6rem 0;
+  background-color: orange;
+}
+
+.container {
+  /* conventional 1130 or 1200px
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 3.2rem;
+  /* apply same auto margin on both sides
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+/* variation class
+.grid--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.container div {
+  font-size: 50px;
+  padding: 100px;
+}
+
+.container div:nth-child(1) {
+  background-color: aqua;
+}
+.container div:nth-child(2) {
+  background-color: yellow;
+}
+.container div:nth-child(3) {
+  background-color: green;
+}
+.container div:nth-child(4) {
+  background-color: violet;
+} */
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+/* .grid:last-child {
+  margin-bottom: 0;
+  /* remove padding if less than 1 grid per section
+} */
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+  /* add padding if more than 1 grid per section */
+}
+
+.grid--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--center-v {
+  align-items: center;
+  /* can also set align self on the child element */
+}
+
+.step-img {
+  width: 40%;
+}
+
+/* commmon heading styles */
+.heading-primary,
+.heading-secondary {
+  font-weight: 700;
+  color: #2e1907;
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.subheading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  display: block;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+.heading-tertiary {
+  font-size: 3rem;
+  margin-bottom: 3.2rem;
+  line-height: 1.2;
+  /* 1.2 vs 1.2rem is different */
+}
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+}
+
+.step-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.step-img-box::before {
+  content: " ";
+  display: block;
+  width: 60%;
+  padding-bottom: 60%; /* instead of applying height 60%. 60% of parent's width */
+  background-color: #fdf2e9;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* setting layer order */
+  z-index: -2;
+}
+
+.step-img-box::after {
+  content: " ";
+  display: block;
+  width: 50%;
+  padding-bottom: 50%; /* instead of applying height 60%. 60% of parent's width */
+  background-color: #fae5d3;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* setting layer order */
+  z-index: -1;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/* you cannot add child or psuedo elements to images */
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+.heading-featured {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #888;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 3.2rem;
+  filter: brightness(0%);
+  opacity: 50%;
+}
+
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+.meal-img {
+  width: 100%;
+}
+
+.meal-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+}
+
+.meal-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #e67e22;
+}
+
+.meal-attribute {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+/* format the strong tag */
+strong {
+  font-weight: 500;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 100px;
+  /* 100px is just arbitary instead of % */
+  font-weight: 600;
+}
+
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+
+.tag--paleo {
+  background-color: #94d82d;
+}
+
+.tag--vegan {
+  background-color: #ffd43b;
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  /* to prevent image overlap over round borders*/
+  transition: 0.5s;
+}
+
+.meal:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
+  /* translate(0, 2rem); */
+}
+
+.meal-content {
+  padding: 3.2rem;
+}
+
+.meal-tags {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+  /* setting the font size in the parent element in case you want to use the link class again later */
+}
+
+.link:link,
+.link:visited {
+  text-decoration: none;
+  color: #e67e22;
+  border-bottom: 1px solid currentColor;
+  /* currentColor takes the text color, good for hover */
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+  /* cannot remove border as removes 1px, causing shift */
+}
+
+.section-testimonials {
+  background-color: #fdf2e9;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+  /* to fix awkward gaps when smaller viewport */
+}
+
+.testimonials-container {
+  padding: 9.6rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
+  column-gap: 8rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  /* line height is not rem */
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+.gallery-item img {
+  display: block;
+  /* to remove white space inbetween elements (inline vs block) */
+  width: 100%;
+  /* set to fit the fr */
+  transition: all 0.4s;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 1.6rem;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+.plan-name {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  /* letter spacing is not rem */
+  margin-bottom: 3.2rem;
+}
+
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.plan-sign-up {
+  text-align: center;
+  margin-top: 4.8rem;
+}
+
+.pricing-plan {
+  border-radius: 11px;
+  padding: 4.8rem;
+  width: 75%;
+  /* 75% of div container */
+}
+
+.pricing-plan--starter {
+  justify-self: end;
+  border: 2px solid #fdf2e9;
+}
+
+.pricing-plan--complete {
+  background-color: #fdf2e9;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-plan--complete::after {
+  content: "Best Value";
+  position: absolute;
+  text-transform: uppercase;
+  top: 6%;
+  right: -18%;
+  background-color: #ffd43b;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.8rem 8rem;
+  color: #333;
+  transform: rotate(45deg);
+  /* units required */
+}
+
+.grid--4col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.feature-icon {
+  color: #e67e22;
+  height: 3.2rem;
+  width: 3.2rem;
+  margin-bottom: 3.2rem;
+
+  background-color: #fdf2e9;
+  border-radius: 50%;
+  padding: 1.6rem;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.section-cta {
+  padding: 9.6em 0;
+}
+
+.grid-cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* calculate frs by fractions */
+  /* background-color: #e67e22; */
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
+  border-radius: 11px;
+  background-image: linear-gradient(90deg, #eea564, #e67e22);
+  height: 50rem;
+  overflow: hidden;
+}
+
+.cta-textbox {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  /* no spacing with rem */
+  color:#2e1907;
+}
+.cta-textbox .heading-secondary {
+  color:#2e1907;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text{
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-imgbox {
+  background-image:linear-gradient(
+    90deg,
+    rgba(230, 126, 34, 0.3),
+    rgba(230, 126, 34, 0.3)
+  ),
+  url("../img/eating.jpg") ; /* to move up to the parent */ background-size:
+      cover;
+  );
+}
+
+.cta-form{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap:2.4rem;
+}
+
+.cta-form label{
+  display:block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select{
+  width:100%;
+  padding:1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color:inherit;
+  /* input forms do not automatically inherit fonts? */
+  border:none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow:0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cta-form input::placeholder{
+  color:#aaa;
+}
+
+.cta-form button{
+  /* not a link hence previous css didn't apply */
+}
+
+.btn--form{
+  background-color:#45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding:1.2rem;
+}
+
+.btn--form:hover{
+  background-color:#fff;
+  color: #555;
+  align-self: end;
+  padding:1.2rem;
+}
+
+*:focus{
+  /* tab select outline*/
+  outline: none;
+  /* outline: 4px dotted #e67e22;
+  outline-offset: 8px; */
+  box-shadow: 0 0 0 0.4rem #6f6f6f;
+}
+
+.section-cta *:focus{
+  /* tab select outline*/
+  outline: none;
+  /* outline: 4px dotted #e67e22;
+  outline-offset: 8px; */
+  box-shadow: 0 0 0 0.4rem #6f6f6f;
+}
