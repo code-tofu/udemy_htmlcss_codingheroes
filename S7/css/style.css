@@ -56,7 +56,7 @@ html {
   /* to make the background change smooth */
   transition: all 1s;
 
-  border:none;
+  border: none;
   cursor: pointer;
   font-family: inherit;
 }
@@ -692,7 +692,7 @@ strong {
 }
 
 .section-cta {
-  padding: 9.6em 0;
+  padding: 9.6em 0 12.8rem 0;
 }
 
 .grid-cta {
@@ -710,81 +710,80 @@ strong {
 .cta-textbox {
   padding: 4.8rem 6.4rem 6.4rem 6.4rem;
   /* no spacing with rem */
-  color:#2e1907;
+  color: #2e1907;
 }
 .cta-textbox .heading-secondary {
-  color:#2e1907;
+  color: #2e1907;
   margin-bottom: 3.2rem;
 }
 
-.cta-text{
+.cta-text {
   font-size: 1.8rem;
   line-height: 1.8;
   margin-bottom: 4.8rem;
 }
 
 .cta-imgbox {
-  background-image:linear-gradient(
-    90deg,
-    rgba(230, 126, 34, 0.3),
-    rgba(230, 126, 34, 0.3)
-  ),
-  url("../img/eating.jpg") ; /* to move up to the parent */ background-size:
-      cover;
-  );
+  background-image: linear-gradient(
+      90deg,
+      rgba(230, 126, 34, 0.3),
+      rgba(230, 126, 34, 0.3)
+    ),
+    url("../img/eating.jpg"); /* to move up to the parent */
+  background-size: cover;
 }
 
-.cta-form{
-  display:grid;
+.cta-form {
+  display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 3.2rem;
-  row-gap:2.4rem;
+  row-gap: 2.4rem;
 }
 
-.cta-form label{
-  display:block;
+.cta-form label {
+  display: block;
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 1.2rem;
 }
 
 .cta-form input,
-.cta-form select{
-  width:100%;
-  padding:1.2rem;
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
   font-size: 1.8rem;
   font-family: inherit;
-  color:inherit;
+  color: inherit;
   /* input forms do not automatically inherit fonts? */
-  border:none;
+  border: none;
   background-color: #fdf2e9;
   border-radius: 9px;
-  box-shadow:0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-.cta-form input::placeholder{
-  color:#aaa;
+.cta-form input::placeholder {
+  color: #aaa;
 }
 
-.cta-form button{
+.cta-form button {
   /* not a link hence previous css didn't apply */
 }
 
-.btn--form{
-  background-color:#45260a;
+.btn--form {
+  background-color: #45260a;
   color: #fdf2e9;
   align-self: end;
-  padding:1.2rem;
+  padding: 1.2rem;
 }
 
-.btn--form:hover{
-  background-color:#fff;
+.btn--form:hover {
+  background-color: #fff;
   color: #555;
   align-self: end;
-  padding:1.2rem;
+  padding: 1.2rem;
 }
 
-*:focus{
+*:focus {
   /* tab select outline*/
   outline: none;
   /* outline: 4px dotted #e67e22;
@@ -792,10 +791,85 @@ strong {
   box-shadow: 0 0 0 0.4rem #6f6f6f;
 }
 
-.section-cta *:focus{
+.section-cta *:focus {
   /* tab select outline*/
   outline: none;
   /* outline: 4px dotted #e67e22;
   outline-offset: 8px; */
   box-shadow: 0 0 0 0.4rem #6f6f6f;
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: 1.6fr 1.4fr 1fr 1fr 1fr;
+  padding: 9.6rem;
+}
+
+.footer {
+  border-top: 1px solid #eee;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #cf711f;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: #767676;
+  line-height: 1.6;
+  margin-top: auto;
+  /* causes copyright text to fill the column. works also horizontally */
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
 }
